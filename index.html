@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+	<title>Intro to programming. Project #2. Ostrovskii Andrei</title>
+</head>
+<body>
+	<!-- I improved the structure of headers if compared to the first project: now I have a single h1 and various h2's -->
+	<div class="header"><h1>{intro to programming: notes &amp; more;}</h1></div>
+	<!-- Horizontal menu. I created ID's exactly for it -->
+	<div class="menu">
+			<a href="#webbasics">Web Basics</a>
+			<a href="#htmlbasics">HTML Basics</a>
+			<a href="#wpagephilo">Philosophy</a>
+			<a href="#cssbasics">CSS Basics</a>
+			<a href="#aboutme">About Me</a>
+	</div>
+	<!-- I came up with two major content classes: the one deals with the general info (philosophy), the other features the code (coding) -->
+	<div class="philosophy" id="webbasics">
+		<h2>Web Basics</h2>
+			<!-- I created two classes for images: imagebasic and imagelarger -->
+			<p><img class="imagebasic" src="https://1onjea25cyhx3uvxgs4vu325-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/Mid-Career-Career-Change.png" alt="web basics">Web basically includes client computers, browsers, server computers, and the Internet. <b>Browsers</b> are special programs that help <b>client computers</b> connect (communicate) to <b>server computers</b>. Let's say somebody wants to open a website. He types the name of the website and presses the "Enter" button. The browser sends a request to the server computer, where this website is hosted. The server responds with the code of the web page that was requested (I guess), whereafter the browser processes the code, and shows the page to the client the way a human being is used to - without the code :) If I understand the things correctly, the same way one can get the access to various data, not necessarily web pages. There may be the direct access to different types of files that may be not embedded into web pages.</p>
+			<p>The <b>Internet</b> is the network that unites all the computers mentioned above. <b>HTTP</b> - <em>HyperText Transfer Protocol</em> - is the protocol that computers use to "communicate" (exchanging data on request) on the Web. <b>HTML</b> - <em>HyperText Markup Language</em> - is the most common data type on the Web. As a "language", it says browser how to show the web page to the client.</p>
+	</div>
+	<div class="coding" id="htmlbasics">
+		<h2>HTML Basics</h2>
+			<p><img class="imagebasic" src="htmlbasics.jpeg" alt="html basics">One can tell a browser how to display the content with the help of so-called HTML <b>elements</b>. HTML element usually contains the <em>opening</em> and <em>closing</em> tags with some content between them:</p>
+			<!-- I was experimenting with the combo of <pre>+<code>, but quickly realized it didn't look like I wanted it to. Therefore, I decided to stay with the <code>, and specified it in CSS. I found the information about entities here https://www.w3schools.com/html/html_entities.asp -->
+			<p>
+				<code>
+					&lt;opening tag&gt;content&lt;/closing tag&gt;
+				</code>
+			</p>
+			<p>These tags affect the way this content will be displayed. For example, the <b>b</b>-element makes the text look <b>bold</b>. The <b>em</b>-element makes the text look <em>italic</em>. The <b>a</b>-element creates the link to the other web pages or particular places on the web page, making the content clickable like <a href="https://eu.udacity.com/">this</a>. The structure of this element is more complicated and includes the <em>attribute</em> (additional info) in the opening tag as follows:</p>
+			<p>
+				<code>
+					&lt;a href="url"&gt;
+				</code>
+			</p>
+			<p>where url is the address of the link.</p>
+			<p>Some elements have no closing tags. For example, the <b>br</b>-element simply breaks the line so that the content after the single br-tag is displayed on the next line. The <b>img</b>-element displays the image that is hosted somewhere. This "somewhere" is described in the <b>src</b>-attribute as follows:</p>
+			<p>
+				<code>
+					&lt;img src="url"&gt;
+				</code>
+			</p>
+			<p>The structure of the img-element can also include the <b>alt</b>-attribute:</p>
+			<p>
+				<code>
+					&lt;img src="url" alt="text"&gt;
+				</code>
+			</p> 
+			<p>This text will be displayed if there is no chance to display the image. In either case, there is no closing tag!</p>
+			<p>Some elements deal with the content, which is "bigger" than symbols, words, or lines. For example, the <b>p</b>-element defines a paragraph. Everything that is inside the <b>p</b> looks like a separated group. The same is about the <b>div</b>-element, which is a so-called box <b>container</b>. If I am not mistaken, the main idea behind containers is to add to the "macromanagement", whereas "micromanagement" is on <b>inline</b> elements :)  </p>
+	</div>
+	<div class="philosophy" id="wpagephilo">
+		<h2>Web Page Philosophy</h2>
+			<p>A web page has two dimensions: the one is the code, the other one is how a client sees it. From the "codding" point of view, there are three main things that matter: HTML, CSS, and DOM. With the help of the <b>HTML</b>, a developer adds the <b>content</b> to the page, sets the <b>structure</b> of this content, and connects the page to the CSS.</p> 
+			<p><img class="imagebasic" src="wpagephilosophy.jpeg" alt="web page philosophy"><b>CSS</b> - <em>Cascading Style Sheets</em> - are "responsible" for the <b>style</b>: fonts, colors, shapes, positioning, etc. It is possible to set the styling rules for various classes of elements within the CSS. Then, if the HTML-element is attributed to a particular class, it follows the styling rules defined for this class.</p>
+			<p><b>DOM</b> - <em>Document Object Model</em> - is a standard convention for representing and interacting with the HTML-elements. Browsers percept HTML documents as <b>tree-like structures</b>. Besides other things, it means there is a hierarchy of elements. For example, if we have the em-element inside of the b-element, the text of the em-element is not only italic but also bold.</p>
+			<p>It's a good idea to percept a web page as the combination of <b>boxes</b>. This abstraction helps us understand the structure of the page better. One can imagine lots of different boxes. Three major ones are <em>header</em> box, <em>main content</em> box, and <em>footer</em> box. Moving from this general scheme forwards, one can also divide each of these areas into smaller boxes.</p>
+	</div>
+	<div class="coding" id="cssbasics">
+		<h2>CSS Basics</h2>
+			<p><img class="imagebasic" src="cssbasics.jpeg" alt="css basics">The principal scheme of the CSS working includes selectors, properties, and declarations. For example:</p> 
+			<!-- I found no other way (4x&nbsp;) to show the indentation  -->
+			<p>
+				<code>
+				h1 {<br>&nbsp;&nbsp;&nbsp;&nbsp;background-color: #ffffff;<br>}
+				</code>
+			</p>
+			<p>In this case, "h1" is the <b>selector</b>. The selector defines the element, to which the styling rule is applied. It may be the specific tag like here. It can also be the class of elements, or id, or the tag of the specific class, and so on. For example:</p>
+			<p>
+				<code>
+				.image {<br>&nbsp;&nbsp;&nbsp;&nbsp;background-color: #ffffff;<br>}
+				</code>
+			</p>
+			<p>In this case, the rule is applied to any element of the "image" class. In both examples, "background-color" is the <b>property</b>. There are lots of different ones, like font-family, font-weight, margin, padding, border, position, display, and many many more. Every CSS property is a specific styling aspect. The name of the property usually gives a great hint of what it is all about. In these examples, CSS sets the color of the background.
+			</p> 
+			<p>Finally, the expression like "background-color: #ffffff" is the <b>declaration</b>. The declaration is the assignment of the value to the property. In these examples, the color of the background was defined as white. The same way one could set the styling rules regarding nearly everything in the HTML document using CSS.<p> 
+			<p>It is a good idea to have a separate .css file for styling rule. This approach helps separate the style from the structure and simplifies the understanding of the code. To connect this CSS file to the HTML file, one has to include the link like this in the head section of the HTML document:
+			</p>
+			<p>
+				<code>
+				&lt;link rel="stylesheet" href="name.css"&gt;
+				</code>
+			</p>
+			<p>It is important that both HTML and CSS files are stored on the same level of the storage. Otherwise, the link must include the whole way to the CSS file to make it work.</p>
+	</div>
+	<div class="philosophy" id="aboutme">
+		<h2>About Me</h2>
+			<p><img class="imagelarger" src="aboutme.png" alt="Andrei Ostrovskii"><b>Programming</b> was always my passion. While at school, I was delighted by the basics of computer science. I used to do all these simple algorithmic exercises and was happy to "code" in BASIC or Pascal. I also made lots of "websites" dedicated to my musical or sports interests mainly using WYSIWYG-tools like Frontpage. Maybe I was crazy, but I found it very exciting when a couple of strange symbols I typed in the Notepad transformed into a web page, or when my "code" forced this soulless machine do what I wanted. Nonetheless, I never made programming my occupation.</p>
+			<p>Why? Probably because I had one more passion - <b>chess</b>. I invested a lot of time and brought a lot of effort to improve. I became an international master, made it to 2000 best players worldwide (overall, around 10 Million play this game), earned one grandmaster norm, started teaching others. You can learn more about my chess-related activities on my <a href="https://www.mostrovski.com/">website</a> and my YouTube <a href="https://www.youtube.com/c/AndreiOstrovski">channel</a>.</p> 
+			<p>I guess the time of changes came. It's hard to make a living just playing and teaching chess. I want to change the way I earn money. I think I must try programming! What could be better than a well-payed work that you in the first place <em>love</em>? Moreover, I have a dream of creating something remarkable like sort of chess Udacity :) I mean there should be a chance to combine my passions in the future. I will be the happiest person on this planet then!</p>
+	</div>
+	<!-- Here comes a footer -->
+	<div class="footer">
+		&copy; 2018 Andrei Ostrovskii
+	</div>
+</body>
+</html>

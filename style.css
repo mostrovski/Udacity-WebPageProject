@@ -1,0 +1,96 @@
+/* First of all, I wanted to define the general style. My main goal was to center the content. I started my investigation 
+here https://developer.mozilla.org/en-US/docs/Web/CSS/Reference and continued it here https://www.w3schools.com/css/default.asp.
+As for the combination of the width and auto margin, I took the idea from here https://www.w3schools.com/css/css_align.asp */ 
+
+* {
+	font-family: sans-serif;
+	text-align: justify;
+	margin: auto;
+	width: 90%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/* Here I start defining specific elements */
+
+code {
+	display: block;
+	font-family: monospace;
+	margin-left: 0px;
+	padding-left: 5px;
+	border-left: 2px solid #000000;
+}
+
+h1, h2 {
+	font-family: "Courier New";
+}
+
+/* The most challenging task was to come up with the horizontal menu :) I found the information here https://www.w3schools.com/css/css_navbar.asp, 
+but the direct implementation didn't seem to work. After some experimenting, I decided to leave the idea of <ul>+<li>. I took the idea of displaying 
+links as blocks and combined it with what I've learned in the course - display: flex; - and found the result more or less fine. There are two things
+I am not satisfied with, though: 1) when hovered, only the area of the link-block changes its color; 2) when I change the size of the window, at some
+point the menu starts disappearing */
+
+/* Here comes menu */
+
+.menu {
+	background-color: #009688;
+    display: flex;
+}
+
+.menu a {
+	display: block;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.menu a:hover {
+	background-color: #4CAF50;
+}
+
+/* Two image classes */
+
+.imagebasic {
+	float: right;
+	height: 40%;
+	width: 40%; 
+	margin: 0px 0px 15px 20px;
+}
+
+.imagelarger {
+	float: right;
+	height: 55%;
+	width: 55%; 
+	margin: 0px 0px 15px 20px;
+}
+
+/* Two major content classes */
+
+.philosophy {
+	border-right: 0.5px dashed #009688;
+}
+
+.coding {
+	border-left: 0.5px dashed #009688;
+	border-bottom: 0.5px dashed #009688;
+	border-top: 0.5px dashed #009688;
+}
+
+.coding p {
+	background-color: #fbfbfb;
+}
+
+/* Styling for the footer */
+
+.footer {
+	color: #FFFFFF;
+	font-family: monospace;
+	font-weight: bold;
+	font-size: larger;
+	text-align: center;
+	background-color: #009688;
+}
